@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS search_filters;
+DROP TABLE IF EXISTS photos;
+DROP TABLE IF EXISTS profiles;
+DROP TABLE IF EXISTS users;
