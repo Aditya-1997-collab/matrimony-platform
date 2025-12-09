@@ -1,7 +1,9 @@
-require("dotenv").config()
-const express = require("express")
-const cors = require("cors")
-const { postgraphile } = require("postgraphile")
+import dotenv from "dotenv"
+dotenv.config()
+
+import express from "express"
+import cors from "cors"
+import { postgraphile } from "postgraphile"
 
 const app = express()
 
