@@ -1,0 +1,7 @@
+ALTER TABLE users ADD COLUMN role VARCHAR(20) DEFAULT 'user';
+
+ALTER TABLE profiles
+ADD COLUMN managed_by VARCHAR(20) DEFAULT 'self',
+ADD COLUMN profile_status VARCHAR(20) DEFAULT 'draft';
+
+ALTER TABLE photos ADD COLUMN is_approved BOOLEAN DEFAULT false;

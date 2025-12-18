@@ -8,7 +8,7 @@ import { postgraphile } from "postgraphile"
 const app = express()
 
 app.use(cors())
-app.use(express.json())
+app.use("/auth", express.json())
 
 // PostGraphile automatically exposes your DB as API
 app.use(
@@ -18,7 +18,8 @@ app.use(
     {
       graphiql: true,
       enhanceGraphiql: true,
-      enableCors: true
+      enableCors: true,
+      pgDefaultRole: 'app_user'
     }
   )
 )
