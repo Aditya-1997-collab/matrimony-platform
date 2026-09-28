@@ -4,11 +4,18 @@ dotenv.config()
 import express from "express"
 import cors from "cors"
 import { postgraphile } from "postgraphile"
+import authRoutes from "./src/auth.routes.js"
+import onboardingRoutes from "./src/onboarding.routes.js"
+import profileRoutes from "./src/profile.routes.js"
 
 const app = express()
 
 app.use(cors())
-app.use("/auth", express.json())
+app.use(express.json())
+
+app.use("/auth", authRoutes)
+app.use("/onboarding", onboardingRoutes)
+app.use("/profile", profileRoutes)
 
 // PostGraphile automatically exposes your DB as API
 app.use(
