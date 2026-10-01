@@ -28,6 +28,7 @@ app.use(
     {
       graphiql: true,
       enhanceGraphiql: true,
+      retryOnInitFail: true,
       enableCors: true,
       pgDefaultRole: 'app_user'
     }
