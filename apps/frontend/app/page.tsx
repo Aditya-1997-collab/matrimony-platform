@@ -27,7 +27,7 @@ export default function Home() {
         setIsLoggedIn(true);
         
         // Check if user has completed profile
-        fetch("http://localhost:5000/profile/status", {
+        fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/profile/status`, {
           headers: {
             "Authorization": `Bearer ${token}`,
           },
