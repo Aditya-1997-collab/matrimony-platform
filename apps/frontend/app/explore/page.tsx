@@ -79,7 +79,7 @@ export default function ExplorePage() {
       });
 
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_API_UR}/profile/explore?${params}`,
+        `${process.env.NEXT_PUBLIC_BACKEND_API_URL}/profile/explore?${params}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,

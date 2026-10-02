@@ -20,7 +20,7 @@ export default function SignupPage() {
     setLoading(true);
 
     try {
-      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_UR}/auth/signup`, {
+      const response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_API_URL}/auth/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
